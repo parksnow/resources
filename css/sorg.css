@@ -1,0 +1,221 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b6b6b6;
+}
+
+::-webkit-scrollbar-track {
+  background: #ddd;
+}
+
+
+
+html {
+  font-family: -apple-system,system-ui,Helvetica Neue,PingFang SC,Microsoft YaHei,Arial,sans-serif;
+  color: #333;
+  background: #f4f5f5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  padding: 0;
+  font-weight: 700;
+  margin: 1.5em 5px !important;
+  padding: 0.5em 1em !important;
+}
+
+h2 {
+  color: #c5000b;
+  padding: 0.5em 0!important;
+  font-size: 20px !important;
+}
+
+h2:before {
+  content: '\00a7 \00a0';
+}
+
+h3 {
+  border-left: 6px solid #ff7e79;
+  font-size: 18px;
+  padding-left: 9px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h4:before {
+  content: '\00bb \00a0';
+}
+
+p {
+  margin: 1rem;
+}
+
+code {
+  font-family: Menlo, Consolas, 'Ubuntu Mono', Monaco, 'source-code-pro', monospace;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0.2em 0;
+  font-size: 90%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+code {
+  color: #c7254e;
+  background-color: #f9f2f4;
+  border-radius: 4px;
+  font-family: Consolas, monospace;
+  padding: 2px 4px;
+  font-size: 90%;
+}
+
+p > code {
+  color: #c7264e;
+  background-color: #f9f2f4;
+  font-size: .95em;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+
+hr {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  background-color: #eeefff;
+}
+a {
+  position: relative;
+  color: #3273dc;
+  cursor: pointer;
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 2px;
+  bottom: -5px;
+  background: #FC5185;
+  left: 50%;
+  right: 50%;
+}
+
+a:hover::after {
+  left: 0;
+  right: 0;
+  transition-timing-function: ease-out;
+  transition-property: right,left;
+  transition-duration: 0.3s;
+}
+
+pre {
+  padding: 1.25rem 1.5rem;
+  margin: .85rem 0;
+  line-height: 1.4;
+  overflow: auto;
+  border-radius: 6px;
+  background: #f8f8f8;
+}
+
+/******************************************************************************
+ * === Head ===
+ *****************************************************************************/
+#head {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 75px;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16);
+  z-index: 1000;
+}
+
+#head .logo {
+  height: 70px;
+}
+
+nav {
+  display: block;
+}
+
+.top-nav {
+  width: 300px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav li {
+  display: inline-block;
+}
+
+/******************************************************************************
+ * === Content ===
+ *****************************************************************************/
+
+#content {
+  position: relative;
+  margin: 100px 100px;
+  width: 66%;
+  padding: 35px;
+  min-height: 100px;
+  border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .2);
+  background: #fff;
+}
+
+#table-of-contents {
+  position: fixed;
+  top: 100px;
+  bottom: 140px;
+  right: 50px;
+  width: 20%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 21px;
+}
+
+#table-of-contents li {
+  font-size: 13px;
+}
+
+#postamble {
+  padding: 3rem 1.5rem 6rem;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #4a4a4a;
+  text-align: center;
+  background: #fff;
+}
+
+
+/**
+ * 辅助类
+ *
+ * 给元素加一个 outline，辅助调试
+ */
+.test {
+  outline: 2px solid lightblue;
+  outline-offset: -2px;
+}
